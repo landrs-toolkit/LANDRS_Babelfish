@@ -1,0 +1,1121 @@
+<?xml version="1.0"?>
+<kml xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Document>
+    <Style id="yellowLineGreenPoly">
+      <LineStyle>
+        <color>7F00FFFF</color>
+        <colorMode>normal</colorMode>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7F00FF00</color>
+        <colorMode>normal</colorMode>
+      </PolyStyle>
+    </Style>
+    <Style id="spray">
+      <LineStyle>
+        <color>4C0000FF</color>
+        <colorMode>normal</colorMode>
+        <width>0</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4C0000FF</color>
+        <colorMode>normal</colorMode>
+      </PolyStyle>
+    </Style>
+    <Folder>
+      <name>Log</name>
+      <Placemark>
+        <name>2 Flight Path  Stabilize</name>
+        <styleUrl>#yellowLineGreenPoly</styleUrl>
+        <Style>
+          <LineStyle>
+            <color>FF00FFFF</color>
+            <colorMode>normal</colorMode>
+            <width>4</width>
+          </LineStyle>
+        </Style>
+        <LineString>
+          <extrude>1</extrude>
+          <altitudeMode>absolute</altitudeMode>
+          <coordinates>-86.2418145,41.7144639,215.29 -86.2418143,41.7144638,215.26 -86.241814,41.7144637,215.24 -86.2418138,41.7144637,215.19 -86.2418135,41.7144637,215.15 -86.2418134,41.7144638,215.13 -86.2418134,41.7144639,215.12 -86.2418134,41.7144639,215.08 -86.2418133,41.714464,215.04 -86.2418133,41.7144641,215.03 -86.2418133,41.7144643,215.06 -86.2418133,41.7144644,215.05 -86.2418133,41.7144645,215.07 -86.2418132,41.7144645,215.04 -86.2418131,41.7144645,215.04 -86.2418132,41.7144647,215.09 -86.2418133,41.7144652,215.13 -86.2418134,41.7144657,215.23 -86.2418132,41.7144665,215.35 -86.2418128,41.7144676,215.53 -86.2418126,41.7144688,215.73 -86.2418124,41.7144699,215.88 -86.2418121,41.7144712,216.01 -86.2418117,41.7144728,215.99 -86.2418111,41.7144744,215.75 -86.2418103,41.7144762,215.35 -86.2418085,41.7144787,214.86 -86.2418067,41.7144785,214.53 -86.2418059,41.7144771,214.41 -86.2418061,41.7144772,214.37 -86.2418057,41.7144761,214.39 -86.2418049,41.7144737,214.32 -86.2418046,41.7144707,214.29 -86.2418042,41.7144686,214.12 -86.2418032,41.7144671,213.99 -86.2418031,41.7144639,213.77 -86.2418033,41.7144623,213.81 -86.2418029,41.714463,214.16 -86.2418031,41.714463,214.42 -86.2418039,41.7144622,214.45 -86.2418049,41.7144614,214.47</coordinates>
+        </LineString>
+      </Placemark>
+      <Placemark>
+        <name>POS Message</name>
+        <Style id="yellowLineGreenPoly">
+          <LineStyle>
+            <color>7F00FFFF</color>
+            <colorMode>normal</colorMode>
+            <width>4</width>
+          </LineStyle>
+          <PolyStyle>
+            <color>7F00FF00</color>
+            <colorMode>normal</colorMode>
+          </PolyStyle>
+        </Style>
+        <LineString>
+          <coordinates>-86.241814,41.7144639,217.97 -86.2418128,41.7144636,218.01 -86.2418119,41.7144643,218.04 -86.2418119,41.7144652,218.21 -86.2418118,41.7144665,218.44 -86.2418115,41.7144678,218.62 -86.241811,41.7144693,218.81 -86.2418107,41.714471,218.95 -86.2418101,41.7144726,218.98 -86.2418099,41.7144735,218.93 -86.2418093,41.7144752,218.66 -86.2418089,41.7144761,218.43 -86.2418084,41.7144769,218.12 -86.2418078,41.7144776,217.81 -86.2418059,41.714477,217.27 -86.2418047,41.7144777,216.74 -86.241805,41.7144786,216.27 -86.2418048,41.7144793,215.9 -86.2418028,41.714478,215.56 -86.2418018,41.7144767,215.3 -86.2418005,41.7144757,215.07 -86.2418006,41.7144747,214.91 -86.2418006,41.7144739,214.51 -86.2418006,41.7144732,214.09 -86.2418009,41.7144725,213.76 -86.2418015,41.7144717,213.44 -86.2418021,41.7144706,213.16 -86.2418024,41.7144695,212.93 -86.2418025,41.7144685,212.74 -86.2418026,41.7144673,212.59</coordinates>
+        </LineString>
+      </Placemark>
+      <Folder>
+        <name>Planes</name>
+        <Placemark>
+          <name>Plane 0</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.51 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -3.21 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 350.83 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144639</latitude>
+              <longitude>-86.2418145</longitude>
+              <altitude>215.29</altitude>
+            </Location>
+            <Orientation>
+              <heading>350.83</heading>
+              <tilt>-3.21</tilt>
+              <roll>-0.51</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 1</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.52 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -3.21 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 350.83 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144638</latitude>
+              <longitude>-86.2418143</longitude>
+              <altitude>215.26</altitude>
+            </Location>
+            <Orientation>
+              <heading>350.83</heading>
+              <tilt>-3.21</tilt>
+              <roll>-0.52</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 2</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.52 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -3.22 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 350.83 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144637</latitude>
+              <longitude>-86.241814</longitude>
+              <altitude>215.24</altitude>
+            </Location>
+            <Orientation>
+              <heading>350.83</heading>
+              <tilt>-3.22</tilt>
+              <roll>-0.52</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 3</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.53 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -3.24 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 350.83 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144638</latitude>
+              <longitude>-86.2418134</longitude>
+              <altitude>215.13</altitude>
+            </Location>
+            <Orientation>
+              <heading>350.83</heading>
+              <tilt>-3.24</tilt>
+              <roll>-0.53</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 4</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.52 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -3.23 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 350.83 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.714464</latitude>
+              <longitude>-86.2418133</longitude>
+              <altitude>215.04</altitude>
+            </Location>
+            <Orientation>
+              <heading>350.83</heading>
+              <tilt>-3.23</tilt>
+              <roll>-0.52</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 5</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.16 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -0.33 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 350.02 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144647</latitude>
+              <longitude>-86.2418132</longitude>
+              <altitude>215.09</altitude>
+            </Location>
+            <Orientation>
+              <heading>350.02</heading>
+              <tilt>-0.33</tilt>
+              <roll>-0.16</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 6</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: 0.03 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -0.05 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 350.22 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144652</latitude>
+              <longitude>-86.2418133</longitude>
+              <altitude>215.13</altitude>
+            </Location>
+            <Orientation>
+              <heading>350.22</heading>
+              <tilt>-0.05</tilt>
+              <roll>0.03</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 7</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.12 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: 0.2 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 351.13 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144657</latitude>
+              <longitude>-86.2418134</longitude>
+              <altitude>215.23</altitude>
+            </Location>
+            <Orientation>
+              <heading>351.13</heading>
+              <tilt>0.2</tilt>
+              <roll>-0.12</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 8</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.07 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: 0.08 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 352.4 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144665</latitude>
+              <longitude>-86.2418132</longitude>
+              <altitude>215.35</altitude>
+            </Location>
+            <Orientation>
+              <heading>352.4</heading>
+              <tilt>0.08</tilt>
+              <roll>-0.07</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 9</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.41 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: 0.13 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 353.14 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144676</latitude>
+              <longitude>-86.2418128</longitude>
+              <altitude>215.53</altitude>
+            </Location>
+            <Orientation>
+              <heading>353.14</heading>
+              <tilt>0.13</tilt>
+              <roll>-0.41</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 10</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.55 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -0.34 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 353.02 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144688</latitude>
+              <longitude>-86.2418126</longitude>
+              <altitude>215.73</altitude>
+            </Location>
+            <Orientation>
+              <heading>353.02</heading>
+              <tilt>-0.34</tilt>
+              <roll>-0.55</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 11</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: 0 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -0.1 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 349.42 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144699</latitude>
+              <longitude>-86.2418124</longitude>
+              <altitude>215.88</altitude>
+            </Location>
+            <Orientation>
+              <heading>349.42</heading>
+              <tilt>-0.1</tilt>
+              <roll>-0</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 12</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -0.27 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: 0.18 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 341.29 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144712</latitude>
+              <longitude>-86.2418121</longitude>
+              <altitude>216.01</altitude>
+            </Location>
+            <Orientation>
+              <heading>341.29</heading>
+              <tilt>0.18</tilt>
+              <roll>-0.27</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 13</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -2.58 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -1.27 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 331.88 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144728</latitude>
+              <longitude>-86.2418117</longitude>
+              <altitude>215.99</altitude>
+            </Location>
+            <Orientation>
+              <heading>331.88</heading>
+              <tilt>-1.27</tilt>
+              <roll>-2.58</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 14</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -8.66 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -7.78 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 323.19 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144744</latitude>
+              <longitude>-86.2418111</longitude>
+              <altitude>215.75</altitude>
+            </Location>
+            <Orientation>
+              <heading>323.19</heading>
+              <tilt>-7.78</tilt>
+              <roll>-8.66</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 15</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -14.31 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -27.34 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 317.76 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144762</latitude>
+              <longitude>-86.2418103</longitude>
+              <altitude>215.35</altitude>
+            </Location>
+            <Orientation>
+              <heading>317.76</heading>
+              <tilt>-27.34</tilt>
+              <roll>-14.31</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 16</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: 31.66 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -67.72 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 278.91 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144787</latitude>
+              <longitude>-86.2418085</longitude>
+              <altitude>214.86</altitude>
+            </Location>
+            <Orientation>
+              <heading>278.91</heading>
+              <tilt>-67.72</tilt>
+              <roll>31.66</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 17</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -23.36 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -72.8 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 346.31 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144785</latitude>
+              <longitude>-86.2418067</longitude>
+              <altitude>214.53</altitude>
+            </Location>
+            <Orientation>
+              <heading>346.31</heading>
+              <tilt>-72.8</tilt>
+              <roll>-23.36</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 18</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -4.57 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -73.71 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 324.2 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144771</latitude>
+              <longitude>-86.2418059</longitude>
+              <altitude>214.41</altitude>
+            </Location>
+            <Orientation>
+              <heading>324.2</heading>
+              <tilt>-73.71</tilt>
+              <roll>-4.57</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 19</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: 1.64 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -81.54 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 322.25 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144772</latitude>
+              <longitude>-86.2418061</longitude>
+              <altitude>214.37</altitude>
+            </Location>
+            <Orientation>
+              <heading>322.25</heading>
+              <tilt>-81.54</tilt>
+              <roll>1.64</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 20</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -170.14 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -57.3 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 151.72 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144761</latitude>
+              <longitude>-86.2418057</longitude>
+              <altitude>214.39</altitude>
+            </Location>
+            <Orientation>
+              <heading>151.72</heading>
+              <tilt>-57.3</tilt>
+              <roll>-170.14</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 21</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: 173.8 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: 9.44 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 176.55 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144737</latitude>
+              <longitude>-86.2418049</longitude>
+              <altitude>214.32</altitude>
+            </Location>
+            <Orientation>
+              <heading>176.55</heading>
+              <tilt>9.44</tilt>
+              <roll>173.8</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 22</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -157.97 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -13.12 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 206.93 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144707</latitude>
+              <longitude>-86.2418046</longitude>
+              <altitude>214.29</altitude>
+            </Location>
+            <Orientation>
+              <heading>206.93</heading>
+              <tilt>-13.12</tilt>
+              <roll>-157.97</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 23</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: 177.71 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -0.97 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 222.74 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144686</latitude>
+              <longitude>-86.2418042</longitude>
+              <altitude>214.12</altitude>
+            </Location>
+            <Orientation>
+              <heading>222.74</heading>
+              <tilt>-0.97</tilt>
+              <roll>177.71</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 24</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -171.11 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -7.65 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 237.62 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144671</latitude>
+              <longitude>-86.2418032</longitude>
+              <altitude>213.99</altitude>
+            </Location>
+            <Orientation>
+              <heading>237.62</heading>
+              <tilt>-7.65</tilt>
+              <roll>-171.11</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 25</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -175.6 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -11.39 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 246.53 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144639</latitude>
+              <longitude>-86.2418031</longitude>
+              <altitude>213.77</altitude>
+            </Location>
+            <Orientation>
+              <heading>246.53</heading>
+              <tilt>-11.39</tilt>
+              <roll>-175.6</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 26</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -179.39 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -11.11 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 248.33 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144623</latitude>
+              <longitude>-86.2418033</longitude>
+              <altitude>213.81</altitude>
+            </Location>
+            <Orientation>
+              <heading>248.33</heading>
+              <tilt>-11.11</tilt>
+              <roll>-179.39</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 27</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -179.44 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -10.59 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 246.74 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.714463</latitude>
+              <longitude>-86.2418029</longitude>
+              <altitude>214.16</altitude>
+            </Location>
+            <Orientation>
+              <heading>246.74</heading>
+              <tilt>-10.59</tilt>
+              <roll>-179.44</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+        <Placemark>
+          <name>Plane 28</name>
+          <visibility>0</visibility>
+          <description>&lt;![CDATA[
+              &lt;table&gt;
+                &lt;tr&gt;&lt;td&gt;Roll: -178.03 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Pitch: -11.2 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;Yaw: 245.74 &lt;/td&gt;&lt;/tr&gt;
+                &lt;tr&gt;&lt;td&gt;WP dist  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;tar bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;nav bear  &lt;/td&gt;&lt;/tr&gt;
+				&lt;tr&gt;&lt;td&gt;alt error  &lt;/td&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            ]]&gt;</description>
+          <Model>
+            <altitudeMode>absolute</altitudeMode>
+            <Location>
+              <latitude>41.7144622</latitude>
+              <longitude>-86.2418039</longitude>
+              <altitude>214.45</altitude>
+            </Location>
+            <Orientation>
+              <heading>245.74</heading>
+              <tilt>-11.2</tilt>
+              <roll>-178.03</roll>
+            </Orientation>
+            <Scale>
+              <x>2</x>
+              <y>2</y>
+              <z>2</z>
+            </Scale>
+            <Link>
+              <href>block_plane_0.dae</href>
+            </Link>
+          </Model>
+        </Placemark>
+      </Folder>
+      <Folder>
+        <name>Waypoints</name>
+        <Placemark>
+          <name>Waypoints</name>
+          <LineString>
+            <extrude>1</extrude>
+            <altitudeMode>relativeToGround</altitudeMode>
+            <coordinates>-86.24181,41.71447,0 -86.23891,41.51952,100 -86.23772,41.51954,100 -86.23772,41.51938,100 -86.23887,41.51936,100 -86.23883,41.51921,100 -86.23772,41.51923,100</coordinates>
+          </LineString>
+        </Placemark>
+      </Folder>
+    </Folder>
+  </Document>
+</kml>
