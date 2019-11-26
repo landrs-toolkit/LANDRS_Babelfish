@@ -2,43 +2,77 @@ import gpxpy
 import pandas as pd
 import geojson
 
-gpx_file = open('test.gpx', 'r')  # read gpx file
-gpx = gpxpy.parse(gpx_file)  # extract data from gpx file
 
-# read and record trackpoints
-for track in gpx.tracks:
-    for segment in track.segments:
-        for point in segment.points:
-            trkpt_data = segment.points
+def read_gpx(filename):
+    gpx_file = open(filename, 'r')  # read gpx file
+    gpx = gpxpy.parse(gpx_file)  # extract data from gpx file
+    return gpx
 
-trkpt_df = pd.DataFrame(columns=['lon', 'lat', 'alt'])
 
-for point in trkpt_data:
-    trkpt_df = trkpt_df.append({'lon': point.longitude, 'lat': point.latitude, 'alt': point.elevation},
-                               ignore_index=True)
+def get_trkpts(parsed_gpx):
+    # read and record trackpoints
+    for track in parsed_gpx.tracks:
+        for segment in track.segments:
+            for point in segment.points:
+                trkpt_data = segment.points
+    return trkpt_data
 
-# read and record waypoints
-for waypoint in gpx.waypoints:
-    wpt_data = gpx.waypoints
 
-wpt_df = pd.DataFrame(columns=['lon', 'lat'])
+def get_trkptDF(trkpt_data):
+    trkpt_df = pd.DataFrame(columns=['lon', 'lat', 'alt','time', 'course'])
 
-for waypoint in wpt_data:
-    wpt_df = wpt_df.append({'lon': waypoint.longitude, 'lat': waypoint.latitude}, ignore_index=True)
+    for point in trkpt_data:
+        trkpt_df = trkpt_df.append({'lon': point.longitude, 'lat': point.latitude, 'alt': point.elevation,
+                                    'time': point.time, 'course': point.course}, ignore_index=True)
+    return trkpt_df
 
-# write dataframes to geoJSON
-coordinates = []
-trkpt_df.apply(lambda X: coordinates.append([X['lon'], X['lat'], X['alt']]), axis=1)
 
-coordinates2 = []
-wpt_df.apply(lambda X: coordinates2.append([X['lon'], X['lat']]), axis=1)
+def get_wpts(parsed_gpx):
+    # read and record waypoints
+    for waypoint in parsed_gpx.waypoints:
+        wpt_data = gpx.waypoints
+    return wpt_data
 
-my_line =  geojson.LineString(coordinates)
-my_line2 = geojson.LineString(coordinates2)
 
-features = [geojson.Feature(geometry=my_line, properties={"name": "Trackpoints"}),
-            geojson.Feature(geometry= my_line2, properties={"name": "Waypoints"})]
-feature_collection = geojson.FeatureCollection(features)
+def get_wptDF(wpt_data):
+    wpt_df = pd.DataFrame(columns=['lon', 'lat'])
+    for waypoint in wpt_data:
+        wpt_df = wpt_df.append({'lon': waypoint.longitude, 'lat': waypoint.latitude}, ignore_index=True)
+    return wpt_df
 
-with open('map.geojson', 'w') as fp:
-    geojson.dump(feature_collection, fp)
+
+def write_geojson(trkpt_df, wpt_df):
+    # write dataframes to geoJSON
+    trkpt_coordinates = []
+    trkpt_df.apply(lambda X: trkpt_coordinates.append([X['lon'], X['lat']]), axis=1)
+
+    wpt_coordinates = []
+    wpt_df.apply(lambda X: wpt_coordinates.append([X['lon'], X['lat']]), axis=1)
+
+    trkpt_line = geojson.LineString(trkpt_coordinates)
+    wpt_line = geojson.LineString(wpt_coordinates)
+
+    altitude = []
+    trkpt_df.apply(lambda X: altitude.append(X['alt']), axis=1)
+    time = []
+    trkpt_df.apply(lambda X: time.append(X['time'].__str__()), axis=1)
+    course = []
+    trkpt_df.apply(lambda X: course.append(X['course']), axis=1)
+
+    features = [geojson.Feature(geometry=trkpt_line, properties={"name": "Trackpoints", "altitude": altitude,
+                                                                 "time": time, "course": course}),
+                geojson.Feature(geometry=wpt_line, properties={"name": "Waypoints"})]
+
+    feature_collection = geojson.FeatureCollection(features)
+
+    with open('map.geojson', 'w') as fp:
+        geojson.dump(feature_collection, fp)
+
+
+gpx = read_gpx('test.gpx')
+trkpt_data = get_trkpts(gpx)
+trkpt_df = get_trkptDF(trkpt_data)
+wpt_data = get_wpts(gpx)
+wpt_df = get_wptDF(wpt_data)
+write_geojson(trkpt_df, wpt_df)
+
