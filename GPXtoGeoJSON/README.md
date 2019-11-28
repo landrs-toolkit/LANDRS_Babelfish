@@ -1,6 +1,6 @@
 # GPXtoGeoJSON
 
-This Python program can be used to read in a GPX file and to convert it to a GeoJSON file.
+This Python program can be used to read in a Ardupilot flight log that is in GPX format and convert it to a GeoJSON file.
 
 ### Folder Contents
 - read_gpx.py - Code used to read and parse a GPX file
