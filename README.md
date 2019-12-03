@@ -14,11 +14,14 @@ A python module for converting Mavlink2[](https://github.com/mavlink/c_library_v
 This is a project under development by the Sloan Foundation supported Linked And Networked DRoneS (LANDRS) project which is working to build foundational infrastructure for the support of Unmanned Vehicles.  Specifically this project is aimed at building ontologies and supporting code APIs to facilitate communities building applications that leverage the power of linked data and the semantic web to facilitate researchers capturing and publishing Findable Accessible Interoperable and Reusable data using UxVs (colloquially known as 'drones').  While focuses on small scale unmanned aerial vehicles the project intends to build infrastructure that is both scientific and usecase domain agnostic and which might serve a range of unmanned vehicles potentially including ground rovers, and watercraft.
 
 # Building
-Assumes a *nix system
+Assumes a \*nix system
 
 ```
 $ cd LANDRS_Babelfish/
 $ git submodule update --init --recursive
-$ cmake
+$ mkdir build
+$ cd build
+$ cmake ../mavlinkLD
+$ cmake --build .
 $ ./mavlink_geojson -d /dev/<Path to mavlink port>  #Eg: /dev/ttyACM0
 ```
