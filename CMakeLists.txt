@@ -14,7 +14,7 @@ target_include_directories(mavlink2 INTERFACE
 
 # Add the executable
 add_executable(${PROJECT_NAME} geomavlink.cpp)
-target_sources(${PROJECT_NAME} PUBLIC serial_port.cpp serial_port.h geomavlink.h mavlinkLD_interface.h mavlinkLD_interface.cpp)
+target_sources(${PROJECT_NAME} PUBLIC serial_port.cpp serial_port.h geomavlink.h autopilot_interface.cpp autopilot_interface.h)
 
 # Link
 target_link_libraries(${PROJECT_NAME} mavlink2 pthread)

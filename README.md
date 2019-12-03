@@ -21,7 +21,7 @@ $ cd LANDRS_Babelfish/
 $ git submodule update --init --recursive
 $ mkdir build
 $ cd build
-$ cmake ../mavlinkLD
-$ cmake --build .
-$ ./mavlink_geojson -d /dev/<Path to mavlink port>  #Eg: /dev/ttyACM0
+$ cmake ../
+$ cmake --build . --target all -- -j 2
+$ ./GeoMav -d /dev/<Path to mavlink port>  #Eg: /dev/ttyACM0
 ```
