@@ -12,10 +12,19 @@ target_include_directories(mavlink2 INTERFACE
         $<INSTALL_INTERFACE:include/mavlink2>
         )
 
+#TODO add json lib
+
+# Add LANDESbabelfish Library
+#add_library(LBF INTERFACE)
+#target_include_directories(LBF INTERFACE
+#        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/LANDRSbabelfish>
+#        $<INSTALL_INTERFACE:include/LBF>
+#        )
+
 # Add the executable
 add_executable(${PROJECT_NAME} geomavlink.cpp)
 target_sources(${PROJECT_NAME} PUBLIC serial_port.cpp serial_port.h geomavlink.h autopilot_interface.cpp autopilot_interface.h)
 
 # Link
-target_link_libraries(${PROJECT_NAME} mavlink2 pthread)
+target_link_libraries(${PROJECT_NAME} mavlink2  pthread)
 

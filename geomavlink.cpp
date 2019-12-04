@@ -55,6 +55,7 @@
 //#include "mavlink/include/mavlink/v2.0/common/mavlink.h"
 #include "common/mavlink.h"
 #include "geomavlink.h"
+//#include "converter_I.h"
 
 // ------------------------------------------------------------------------------
 //   TOP
@@ -141,6 +142,8 @@ top (int argc, char **argv)
 	 * Now we can implement the algorithm we want on top of the autopilot interface
 	 */
 	commands(autopilot_interface);
+//TODO complete geomav_commands() and have it run instead of commands()
+//	geomav_commands(autopilot_interface);
 
 
 	// --------------------------------------------------------------------------
@@ -167,7 +170,6 @@ top (int argc, char **argv)
 // ------------------------------------------------------------------------------
 //   COMMANDS
 // ------------------------------------------------------------------------------
-
 void
 commands(Autopilot_Interface &api)
 {
@@ -322,30 +324,66 @@ parse_commandline(int argc, char **argv, char *&uart_name, int &baudrate)
 
 
 // ------------------------------------------------------------------------------
+//   GEOMAV_COMMANDS
+
+// ------------------------------------------------------------------------------
+// This function demonstrates the LANDRSBabelfish library by listening to all mavlink messages sent by an autopilot and writing these to a geojson file.
+void
+geomav_commands(Autopilot_Interface &api)
+//TODO complete
+{
+//TODO Open geojson file to write to
+
+  Mavlink_Messages messages = api.current_messages;
+  /*TODO continuously monitor messages coming off autopilot until requested to stop
+  Each message will need to be identified by it's ID (see packet structure:
+   https://mavlink.io/en/guide/serialization.html but mavlink lib has helper functions to decode this)
+https://mavlink.io/en/messages/common.html#MAV_CMD_GET_MESSAGE_INTERVAL
+
+   IDs are enumurated in mavlink lib common.h: enum MAV_DATA_STREAM
+
+   Then each message will need to be encoded as json (following geojson formatting) and written out to file.
+   Converting message payloads to geojson functions should be written in LANDRSBabelfish/converter_geojson.h
+   Also print something to screen so user can see operation
+  */
+
+
+
+  // --------------------------------------------------------------------------
+  //   END OF GEOMAV_COMMANDS
+  // --------------------------------------------------------------------------
+
+  return;
+
+}
+
+// ------------------------------------------------------------------------------
 //   Quit Signal Handler
 // ------------------------------------------------------------------------------
 // this function is called when you press Ctrl-C
+
 void
 quit_handler( int sig )
+//TODO modify this function to safely save and close out the geojson file as created todate and print out to user where this file has been written to
 {
-	printf("\n");
-	printf("TERMINATING AT USER REQUEST\n");
-	printf("\n");
+  printf("\n");
+  printf("TERMINATING AT USER REQUEST\n");
+  printf("\n");
 
-	// autopilot interface
-	try {
-		autopilot_interface_quit->handle_quit(sig);
-	}
-	catch (int error){}
+  // autopilot interface
+  try {
+    autopilot_interface_quit->handle_quit(sig);
+  }
+  catch (int error){}
 
-	// serial port
-	try {
-		serial_port_quit->handle_quit(sig);
-	}
-	catch (int error){}
+  // serial port
+  try {
+    serial_port_quit->handle_quit(sig);
+  }
+  catch (int error){}
 
-	// end program here
-	exit(0);
+  // end program here
+  exit(0);
 
 }
 
@@ -356,19 +394,17 @@ quit_handler( int sig )
 int
 main(int argc, char **argv)
 {
-	// This program uses throw, wrap one big try/catch here
-	try
-	{
-		int result = top(argc,argv);
-		return result;
-	}
+  // This program uses throw, wrap one big try/catch here
+  try
+  {
+    int result = top(argc,argv);
+    return result;
+  }
 
-	catch ( int error )
-	{
-		fprintf(stderr,"mavlink_control threw exception %i \n" , error);
-		return error;
-	}
+  catch ( int error )
+  {
+    fprintf(stderr,"mavlink_control threw exception %i \n" , error);
+    return error;
+  }
 
 }
-
-
