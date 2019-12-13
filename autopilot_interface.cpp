@@ -247,6 +247,7 @@ read_messages()
 		mavlink_message_t message;
 		success = serial_port->read_message(message);
 
+
 		// ----------------------------------------------------------------------
 		//   HANDLE MESSAGE
 		// ----------------------------------------------------------------------
@@ -369,7 +370,7 @@ read_messages()
 //				this_timestamps.battery_status             &&
 //				this_timestamps.radio_status               &&
 //				this_timestamps.local_position_ned         &&
-//				this_timestamps.global_position_int        &&
+				this_timestamps.global_position_int        &&
 //				this_timestamps.position_target_local_ned  &&
 //				this_timestamps.position_target_global_int &&
 //				this_timestamps.highres_imu                &&
@@ -653,9 +654,17 @@ start()
 	printf("INITIAL POSITION YAW = %.4f \n", initial_position.yaw);
 	printf("\n");
 
+	//Get initial global position
+
+	global_pos.lat = local_data.global_position_int.lat;
+    global_pos.lon = local_data.global_position_int.lon;
+    global_pos.alt = local_data.global_position_int.alt;
+
+    printf("GLOBAL POSITION [LAT, LON, ALT] [degE7] = [ %d, %d, %d] \n", global_pos.lat, global_pos.lon, global_pos.alt);
+
 	// we need this before starting the write thread
 
-
+    /*
 	// --------------------------------------------------------------------------
 	//   WRITE THREAD
 	// --------------------------------------------------------------------------
@@ -670,7 +679,7 @@ start()
 
 	// now we're streaming setpoint commands
 	printf("\n");
-
+    */
 
 	// Done!
 	return;

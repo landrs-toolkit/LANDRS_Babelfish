@@ -72,10 +72,10 @@ top (int argc, char **argv)
 #ifdef __APPLE__
 	char *uart_name = (char*)"/dev/tty.usbmodem1";
 #else
-	char *uart_name = (char*)"/dev/ttyUSB0";
+	char *uart_name = (char*)"/dev/ttyACM0";
 #endif
-	int baudrate = 57600;
-
+	int baudrate = 921600;
+    //TODO add .geojson filename for input argument
 	// do the parse, will throw an int if it fails
 	parse_commandline(argc, argv, uart_name, baudrate);
 
@@ -141,9 +141,9 @@ top (int argc, char **argv)
 	/*
 	 * Now we can implement the algorithm we want on top of the autopilot interface
 	 */
-	commands(autopilot_interface);
+	//commands(autopilot_interface);
 //TODO complete geomav_commands() and have it run instead of commands()
-//	geomav_commands(autopilot_interface);
+    geomav_commands(autopilot_interface);
 
 
 	// --------------------------------------------------------------------------
@@ -165,8 +165,6 @@ top (int argc, char **argv)
 	return 0;
 
 }
-
-
 // ------------------------------------------------------------------------------
 //   COMMANDS
 // ------------------------------------------------------------------------------
@@ -174,104 +172,110 @@ void
 commands(Autopilot_Interface &api)
 {
 
-	// --------------------------------------------------------------------------
-	//   START OFFBOARD MODE
-	// --------------------------------------------------------------------------
+    // --------------------------------------------------------------------------
+    //   START OFFBOARD MODE
+    // --------------------------------------------------------------------------
 
-	api.enable_offboard_control();
-	usleep(100); // give some time to let it sink in
+    api.enable_offboard_control();
+    usleep(100); // give some time to let it sink in
 
-	// now the autopilot is accepting setpoint commands
-
-
-	// --------------------------------------------------------------------------
-	//   SEND OFFBOARD COMMANDS
-	// --------------------------------------------------------------------------
-	printf("SEND OFFBOARD COMMANDS\n");
-
-	// initialize command data strtuctures
-	mavlink_set_position_target_local_ned_t sp;
-	mavlink_set_position_target_local_ned_t ip = api.initial_position;
-
-	// autopilot_interface.h provides some helper functions to build the command
+    // now the autopilot is accepting setpoint commands
 
 
-	// Example 1 - Set Velocity
+    // --------------------------------------------------------------------------
+    //   SEND OFFBOARD COMMANDS
+    // --------------------------------------------------------------------------
+    printf("SEND OFFBOARD COMMANDS\n");
+
+    // initialize command data strtuctures
+    mavlink_set_position_target_local_ned_t sp;
+    mavlink_set_position_target_local_ned_t ip = api.initial_position;
+
+    // autopilot_interface.h provides some helper functions to build the command
+
+
+    // Example 1 - Set Velocity
 //	set_velocity( -1.0       , // [m/s]
 //				  -1.0       , // [m/s]
 //				   0.0       , // [m/s]
 //				   sp        );
 
-	// Example 2 - Set Position
-	 set_position( ip.x - 5.0 , // [m]
-			 	   ip.y - 5.0 , // [m]
-				   ip.z       , // [m]
-				   sp         );
+    // Example 2 - Set Position
+    set_position( ip.x - 5.0 , // [m]
+                  ip.y - 5.0 , // [m]
+                  ip.z       , // [m]
+                  sp         );
 
 
-	// Example 1.2 - Append Yaw Command
-	set_yaw( ip.yaw , // [rad]
-			 sp     );
+    // Example 1.2 - Append Yaw Command
+    set_yaw( ip.yaw , // [rad]
+             sp     );
 
-	// SEND THE COMMAND
-	api.update_setpoint(sp);
-	// NOW pixhawk will try to move
+    // SEND THE COMMAND
+    api.update_setpoint(sp);
+    // NOW pixhawk will try to move
 
-	// Wait for 8 seconds, check position
-	for (int i=0; i < 8; i++)
-	{
-		mavlink_local_position_ned_t pos = api.current_messages.local_position_ned;
-		printf("%i CURRENT POSITION XYZ = [ % .4f , % .4f , % .4f ] \n", i, pos.x, pos.y, pos.z);
-		sleep(1);
-	}
+    // Wait for 8 seconds, check position
+    for (int i=0; i < 8; i++)
+    {
+        mavlink_local_position_ned_t pos = api.current_messages.local_position_ned;
+        printf("%i CURRENT POSITION XYZ = [ % .4f , % .4f , % .4f ] \n", i, pos.x, pos.y, pos.z);
+        sleep(1);
+    }
 
-	printf("\n");
-
-
-	// --------------------------------------------------------------------------
-	//   STOP OFFBOARD MODE
-	// --------------------------------------------------------------------------
-
-	api.disable_offboard_control();
-
-	// now pixhawk isn't listening to setpoint commands
+    printf("\n");
 
 
-	// --------------------------------------------------------------------------
-	//   GET A MESSAGE
-	// --------------------------------------------------------------------------
-	printf("READ SOME MESSAGES \n");
+    // --------------------------------------------------------------------------
+    //   STOP OFFBOARD MODE
+    // --------------------------------------------------------------------------
 
-	// copy current messages
-	Mavlink_Messages messages = api.current_messages;
+    api.disable_offboard_control();
 
-	// local position in ned frame
-	mavlink_local_position_ned_t pos = messages.local_position_ned;
-	printf("Got message LOCAL_POSITION_NED (spec: https://mavlink.io/en/messages/common.html#LOCAL_POSITION_NED)\n");
-	printf("    pos  (NED):  %f %f %f (m)\n", pos.x, pos.y, pos.z );
-
-	// hires imu
-	mavlink_highres_imu_t imu = messages.highres_imu;
-	printf("Got message HIGHRES_IMU (spec: https://mavlink.io/en/messages/common.html#HIGHRES_IMU)\n");
-	printf("    ap time:     %lu \n", imu.time_usec);
-	printf("    acc  (NED):  % f % f % f (m/s^2)\n", imu.xacc , imu.yacc , imu.zacc );
-	printf("    gyro (NED):  % f % f % f (rad/s)\n", imu.xgyro, imu.ygyro, imu.zgyro);
-	printf("    mag  (NED):  % f % f % f (Ga)\n"   , imu.xmag , imu.ymag , imu.zmag );
-	printf("    baro:        %f (mBar) \n"  , imu.abs_pressure);
-	printf("    altitude:    %f (m) \n"     , imu.pressure_alt);
-	printf("    temperature: %f C \n"       , imu.temperature );
-
-	printf("\n");
+    // now pixhawk isn't listening to setpoint commands
 
 
-	// --------------------------------------------------------------------------
-	//   END OF COMMANDS
-	// --------------------------------------------------------------------------
+    // --------------------------------------------------------------------------
+    //   GET A MESSAGE
+    // --------------------------------------------------------------------------
+    printf("READ SOME MESSAGES \n");
 
-	return;
+    // copy current messages
+    Mavlink_Messages messages = api.current_messages;
+
+    // local position in ned frame
+    mavlink_local_position_ned_t pos = messages.local_position_ned;
+    printf("Got message LOCAL_POSITION_NED (spec: https://mavlink.io/en/messages/common.html#LOCAL_POSITION_NED)\n");
+    printf("    pos  (NED):  %f %f %f (m)\n", pos.x, pos.y, pos.z );
+
+    // hires imu
+    mavlink_highres_imu_t imu = messages.highres_imu;
+    printf("Got message HIGHRES_IMU (spec: https://mavlink.io/en/messages/common.html#HIGHRES_IMU)\n");
+    printf("    ap time:     %lu \n", imu.time_usec);
+    printf("    acc  (NED):  % f % f % f (m/s^2)\n", imu.xacc , imu.yacc , imu.zacc );
+    printf("    gyro (NED):  % f % f % f (rad/s)\n", imu.xgyro, imu.ygyro, imu.zgyro);
+    printf("    mag  (NED):  % f % f % f (Ga)\n"   , imu.xmag , imu.ymag , imu.zmag );
+    printf("    baro:        %f (mBar) \n"  , imu.abs_pressure);
+    printf("    altitude:    %f (m) \n"     , imu.pressure_alt);
+    printf("    temperature: %f C \n"       , imu.temperature );
+
+    printf("\n");
+
+    //Mavlink_Messages messages = api.current_messages;
+    mavlink_global_position_int_t gps = messages.global_position_int;
+    printf("Got message GPS_RAW_INT\n");
+    printf("lat: %.4d \n ", gps.lat);
+    printf("lon: %.4d \n ", gps.lon);
+    printf("alt: %.4d \n ", gps.alt);
+
+
+    // --------------------------------------------------------------------------
+    //   END OF COMMANDS
+    // --------------------------------------------------------------------------
+
+    return;
 
 }
-
 
 // ------------------------------------------------------------------------------
 //   Parse Command Line
@@ -325,7 +329,6 @@ parse_commandline(int argc, char **argv, char *&uart_name, int &baudrate)
 
 // ------------------------------------------------------------------------------
 //   GEOMAV_COMMANDS
-
 // ------------------------------------------------------------------------------
 // This function demonstrates the LANDRSBabelfish library by listening to all mavlink messages sent by an autopilot and writing these to a geojson file.
 void
@@ -333,21 +336,33 @@ geomav_commands(Autopilot_Interface &api)
 //TODO complete
 {
 //TODO Open geojson file to write to
+    fstream file;
+    file.open("test.geojson", ios::out);
+    if(!file)
+    {
+        printf("Error in creating file");
+        return;
+    }
+    printf("File created");
 
-  Mavlink_Messages messages = api.current_messages;
-  /*TODO continuously monitor messages coming off autopilot until requested to stop
+   /*TODO continuously monitor messages coming off autopilot until requested to stop
   Each message will need to be identified by it's ID (see packet structure:
    https://mavlink.io/en/guide/serialization.html but mavlink lib has helper functions to decode this)
 https://mavlink.io/en/messages/common.html#MAV_CMD_GET_MESSAGE_INTERVAL
-
    IDs are enumurated in mavlink lib common.h: enum MAV_DATA_STREAM
 
    Then each message will need to be encoded as json (following geojson formatting) and written out to file.
    Converting message payloads to geojson functions should be written in LANDRSBabelfish/converter_geojson.h
-   Also print something to screen so user can see operation
-  */
+   Also print something to screen so user can see operation*/
 
-
+    for (int i = 0; i<10; i++)
+    {
+        mavlink_global_position_int_t pos = api.current_messages.global_position_int;
+        printf("%i CURRENT POSITION [degE7] = [%d, %d, %d] \n", i, pos.lat, pos.lon, pos.alt);
+        /*string data = "hello world";
+        file<<data<<endl;*/
+    }
+    printf("\n");
 
   // --------------------------------------------------------------------------
   //   END OF GEOMAV_COMMANDS
@@ -365,6 +380,7 @@ https://mavlink.io/en/messages/common.html#MAV_CMD_GET_MESSAGE_INTERVAL
 void
 quit_handler( int sig )
 //TODO modify this function to safely save and close out the geojson file as created todate and print out to user where this file has been written to
+//file.close();
 {
   printf("\n");
   printf("TERMINATING AT USER REQUEST\n");
