@@ -7,6 +7,14 @@ A python module for converting Mavlink2[](https://github.com/mavlink/c_library_v
 - Ardupilot interoperability is equally a priority, however, an unknown bug means initial code has only been tested and verified with Px4
 - An end goal is for this to be deplyable via: docker container, systemd service, and as a  cpp library with automated CI.  However for initial release it will be deployed as an example application
 
+## Most recent update
+A new geomav_commands() function has been added to replace the original commands() function. Currently geomav_commands() creates a new .geojson file and then checks the current global position of the autopilot 10 times and prints the result to the screen. 
+
+The following issues remain:
+- geomav_commands() needs to continually monitor global position until user tells it to stop
+- the quit handler needs to be updated to take care of the exit from geomav_commands()
+- all global position messages needs to be encoded as json and written to the .geojson file
+
 ## Contributing
 **This project is only begining 18 November 2019** but is and always will be published openly under Apache 2.0.  PRs and issue submissions are welcomed.
 
